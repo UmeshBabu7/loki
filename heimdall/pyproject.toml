@@ -1,0 +1,33 @@
+[project]
+name = "heimdall"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "UmeshBabu7", email = "umeshtamang129@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "jinja2>=3.1.6",
+    "pydantic>=2.13.3",
+    "ruff>=0.15.11",
+]
+
+[build-system]
+requires = ["uv_build>=0.10.11,<0.11.0"]
+build-backend = "uv_build"
+
+[project.scripts]
+heimdall = "heimdall.cli:app"
+
+[tool.ruff]
+exclude = [".git", ".venv"]
+line-length = 79
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "TCH", "PTH"]
+extend-select = ["T100"]
+ignore = ["PTH123"]
+
+[tool.ruff.format]
+indent-style = "space"
