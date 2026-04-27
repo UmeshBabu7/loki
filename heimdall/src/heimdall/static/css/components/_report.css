@@ -1,0 +1,17 @@
+.report__title {
+  font-size: 20px;
+  text-decoration: underline;
+  text-decoration-color: #425076;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 10px;
+}
+
+.report__description {
+  font-size: 14px;
+  font-weight: normal;
+  color: #474748;
+}
+
+.report__subtitle {
+  color: #555555;
+}

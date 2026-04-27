@@ -1,0 +1,32 @@
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  border: 1px solid #D9D9D9;
+}
+
+.data-table__head {
+  background-color: #2f3b52;
+  color: #ffffff;
+}
+
+.data-table__header-cell {
+  padding: 12px 16px;
+  font-size: 15px;
+  text-align: left;
+  font-weight: normal;
+  border: none;
+}
+
+.data-table__row {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.data-table__cell {
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #474748;
+  font-weight: 500;
+  border: none;
+}
