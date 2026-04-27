@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secrets &amp; Leakage Audit</title>
+    <link rel="stylesheet" href="../static/css/main.css" />
+  </head>
+  <body>
+    <h2 class="report__title">4. Secrets &amp; Leakage Audit</h2>
+    <p class="report__description">
+      This section consolidates findings from GitLeaks and TruffleHog secret
+      scanning tools,highlighting potential credential leaks and sensitive data
+      exposure.
+    </p>
+
+    <p class="report__subtitle">4.1 GitLeaks Findings</p>
+
+    <table class="data-table">
+      <thead class="data-table__head">
+        <tr>
+          <th class="data-table__header-cell">Rule ID</th>
+          <th class="data-table__header-cell">File</th>
+          <th class="data-table__header-cell">Line</th>
+          <th class="data-table__header-cell">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for result in results %}
+        <tr class="data-table__row">
+          <td class="data-table__cell">{{ result.RuleID }}</td>
+          <td class="data-table__cell">{{ result.File }}</td>
+          <td class="data-table__cell">{{ result.StartLine }}</td>
+          <td class="data-table__cell">{{ result.Description }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
