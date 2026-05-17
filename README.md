@@ -1,16 +1,16 @@
-# 🛡️ Loki — Heimdall CLI
+# Loki — Heimdall CLI
 
 A Python CLI tool for processing [Gitleaks](https://github.com/gitleaks/gitleaks) secret scanning output. It takes raw Gitleaks JSON results and either **normalizes them into a clean JSON file** or **renders them into an HTML report** — useful for including security findings in audit reports.
 
 ---
 
-## 📌 Overview
+## Overview
 
 Gitleaks produces verbose JSON output with many fields. Heimdall strips that down to only what matters (`RuleID`, `File`, `StartLine`, `Description`), validates every entry against a Pydantic schema, and writes the result to either a filtered JSON file or a styled HTML table — ready to drop into a security audit document.
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 loki-main/
@@ -46,7 +46,7 @@ loki-main/
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -59,7 +59,7 @@ loki-main/
 
 ---
 
-## 🔑 Features
+## Features
 
 ### Two Subcommands
 
@@ -117,7 +117,7 @@ make lint
 
 ---
 
-## 🖥️ Usage
+## Usage
 
 ### Subcommand: `json` — Normalize Gitleaks output
 
@@ -150,7 +150,7 @@ uv run heimdall template \
 
 ---
 
-## 🔄 Typical Workflow
+## Typical Workflow
 
 ```
 gitleaks detect --report-format json --report-path raw.json
@@ -169,13 +169,13 @@ heimdall template --json-file-path filtered.json \
 
 ---
 
-## 📄 HTML Report
+## HTML Report
 
 The generated HTML report is styled for inclusion in security audit documents. It renders a table under the heading **"4. Secrets & Leakage Audit"** with columns for Rule ID, File, Line, and Description — covering Gitleaks findings as part of a broader secrets and credential leak audit.
 
 ---
 
-## 🛠️ Developer Notes
+## Notes
 
 - The package entry point is `heimdall = "heimdall.cli:app"` — run with `uv run heimdall <subcommand>`
 - Output directories are created automatically if they don't exist (`mkdir(parents=True, exist_ok=True)`)
