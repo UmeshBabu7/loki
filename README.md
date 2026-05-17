@@ -13,7 +13,7 @@ Gitleaks produces verbose JSON output with many fields. Heimdall strips that dow
 ## Project Structure
 
 ```
-loki-main/
+loki/
 ├── Makefile
 └── heimdall/
     ├── pyproject.toml
@@ -91,7 +91,7 @@ Invalid entries cause validation errors rather than silently passing through.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
